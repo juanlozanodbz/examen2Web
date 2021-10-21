@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-
 const CardSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     number: {
@@ -16,7 +15,7 @@ const CardSchema = mongoose.Schema({
         type: String,
         required: true
     }
-}, {collection: 'card'}
+}, {collection: 'card', unique: true}
 )
 
 //Crear el modelo a partir del esquema definido
